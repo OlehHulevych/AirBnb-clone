@@ -17,12 +17,16 @@ export default tseslint.config(
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
     },
-    rules: {
-      ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
-    },
+      "rules": {
+          "no-unused-vars": "off",
+          "@typescript-eslint/no-unused-vars": [
+              "warn", // or "error"
+              {
+                  "argsIgnorePattern": "^_",
+                  "varsIgnorePattern": "^_",
+                  "caughtErrorsIgnorePattern": "^_"
+              }
+          ]
+      },
   },
 )
