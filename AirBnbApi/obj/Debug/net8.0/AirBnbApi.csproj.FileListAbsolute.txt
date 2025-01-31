@@ -112,3 +112,4 @@ C:\Users\Oleh\RiderProjects\AirBnbApi\AirBnbApi\bin\Debug\net8.0\Microsoft.Ident
 C:\Users\Oleh\RiderProjects\AirBnbApi\AirBnbApi\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Oleh\RiderProjects\AirBnbApi\AirBnbApi\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Oleh\RiderProjects\AirBnbApi\AirBnbApi\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\Oleh\RiderProjects\AirBnbApi\AirBnbApi\obj\Debug\net8.0\AirBnbApi.sourcelink.json

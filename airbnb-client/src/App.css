@@ -4,3 +4,7 @@
 @theme{
     --font-roboto:"Roboto", "serif",
 }
+
+*{
+    transition: all .1s;
+}
