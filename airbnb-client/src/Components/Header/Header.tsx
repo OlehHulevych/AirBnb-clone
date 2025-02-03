@@ -12,7 +12,7 @@ export default function Header(){
     const[opened, setOpened] = useState<boolean>(false);
   return(
 
-      <Navbar className={"fixed flex w-full max-h-36 p-4  items-center justify-between border-solid border-white border-b-2"}>
+      <Navbar className={"absolute flex w-full max-h-36 p-4  items-center justify-between border-solid border-white border-b-2"}>
           <Navbar.Brand className={"flex w-1/2 "}>
           <FaHouseChimney className={"text-6xl text-white mr-2"}/>
               <Col>
