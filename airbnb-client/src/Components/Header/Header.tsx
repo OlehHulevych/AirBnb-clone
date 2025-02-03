@@ -1,11 +1,15 @@
 // @ts-ignore
 import {Row, Container, Col, Navbar, Nav} from "react-bootstrap"
+import {useState} from "react";
 
 import { FaHouseChimney } from "react-icons/fa6";
 import BurgerIcon from "../BurgerMenu/BurgerIcon.tsx";
+import Sidebar from "../BurgerMenu/Sidebar.tsx";
 
 
 export default function Header(){
+    
+    const[opened, setOpened] = useState<boolean>(false);
   return(
 
       <Navbar className={"fixed flex w-full max-h-36 p-4  items-center justify-between border-solid border-white border-b-2"}>
@@ -16,7 +20,7 @@ export default function Header(){
                   <h2 className={"text-white font-roboto"}>Real Estate</h2>
               </Col>
           </Navbar.Brand>
-          <BurgerIcon />
+          <BurgerIcon open={opened} setOpened={setOpened} />
           <Navbar className={"w-1/2 max-[600px]:hidden"} id="basic-navbar-nav" >
               <Nav className={"flex justify-around"}>
                       <Nav.Link>Home</Nav.Link>
@@ -25,6 +29,7 @@ export default function Header(){
                       <Nav.Link>Contact Us</Nav.Link>
               </Nav>
           </Navbar>
+          <Sidebar opened={opened}/>
       </Navbar>
     
   )

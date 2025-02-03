@@ -3,7 +3,8 @@
 import './App.css'
 import Layout from "./Layout.tsx";
 import Home from "./Components/Home/Home.tsx";
-import Sidebar from "./Components/BurgerMenu/Sidebar.tsx";
+
+import ProperticeByArea from "./Components/ProperticeByAreaComponent/ProperticeByArea.tsx";
 
 
 function App() {
@@ -11,8 +12,8 @@ function App() {
 
   return (
     <Layout>
-        <Sidebar/>
       <Home/>
+        <ProperticeByArea/>
     </Layout>
   )
 }
