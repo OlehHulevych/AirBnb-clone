@@ -4,7 +4,7 @@ import { MdKitchen } from "react-icons/md";
 
 const LatestPropertyItemComponent = () => {
     return (
-        <div className={"w-[30%] h-auto bg-white pb-4 drop-shadow-xl mr-6 mt-4 max-[800px]:w-[42%] max-[550px]:w-[100%] "}>
+        <div className={"w-[30%] h-auto bg-white pb-4 drop-shadow-xl mr-6 mt-4 max-[800px]:w-[42%] max-[550px]:w-[100%] cursor-pointer transform hover:scale-105 transition-all "}>
             <div className={"mb-2 w-full"}>
                 <img className={"w-full"} src="./stocks/Home_1.png" alt=""/>
             </div>

@@ -8,6 +8,7 @@ import ProperticeByArea from "./Components/ProperticeByAreaComponent/ProperticeB
 import PropertiecByClassification from "./Components/ProperticeByClassification/PropertiecByClassification.tsx";
 import {FilterProvider} from "./context/FilterContext.tsx";
 import LatestPropertyComponent from "./Components/LatestProprties/LatestPropertyComponent.tsx";
+import ContactUsComponent from "./Components/ContactUs/ContactUsComponent.tsx";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <ProperticeByArea/>
         <PropertiecByClassification/>
       <LatestPropertyComponent/>
+      <ContactUsComponent/>
     </Layout>
       </FilterProvider>
   )
