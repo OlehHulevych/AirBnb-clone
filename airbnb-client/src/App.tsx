@@ -7,6 +7,7 @@ import Home from "./Components/Home/Home.tsx";
 import ProperticeByArea from "./Components/ProperticeByAreaComponent/ProperticeByArea.tsx";
 import PropertiecByClassification from "./Components/ProperticeByClassification/PropertiecByClassification.tsx";
 import {FilterProvider} from "./context/FilterContext.tsx";
+import LatestPropertyComponent from "./Components/LatestProprties/LatestPropertyComponent.tsx";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Home/>
         <ProperticeByArea/>
         <PropertiecByClassification/>
+      <LatestPropertyComponent/>
     </Layout>
       </FilterProvider>
   )
