@@ -1,13 +1,5 @@
 ﻿import Layout from "../../Layout.tsx";
-import { FaCity } from "react-icons/fa6";
-import { FaParking } from "react-icons/fa";
-import { FaBus } from "react-icons/fa";
-import { LuSquareArrowOutUpLeft } from "react-icons/lu";
-import { FaWifi } from "react-icons/fa";
-import { CiTempHigh } from "react-icons/ci";
-import { MdOutlinePets } from "react-icons/md";
-import { MdBedroomParent } from "react-icons/md";
-import { TbToolsKitchen3 } from "react-icons/tb";
+
 import Footer from "../Footer/Footer.tsx";
 import {useState} from "react";
 import { IoCloseSharp } from "react-icons/io5";
