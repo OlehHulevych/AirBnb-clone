@@ -45,6 +45,7 @@ public class UserController:ControllerBase
             };
 
             _context.Users.Add(user);
+            _context.SaveChanges();
             string token = _jwtService.GenerateToken(user);
             var ResponseObjectUser = new ResponseObject()
             {
@@ -52,6 +53,7 @@ public class UserController:ControllerBase
                 token = token,
                 gotUser = user
             };
+            
             return Ok(ResponseObjectUser);
         }
         catch(Exception e)

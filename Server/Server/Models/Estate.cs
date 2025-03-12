@@ -13,7 +13,7 @@ public class Estate
     public List<FavoriteEstate> FavoritesLists = new List<FavoriteEstate>();
     public Adress Adress { get; set; }
     public Description Description { get; set; }
-    public int UserId { get; set; }
+    public string UserId { get; set; }
     public User User { get; set; }
 
 }
