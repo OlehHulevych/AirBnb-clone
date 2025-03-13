@@ -4,6 +4,7 @@ using Airbnb_client.Models;
 using Airbnb_client.Services;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Airbnb_client.Controllers;
 
@@ -38,6 +39,7 @@ public class UserController:ControllerBase
                 Id = Guid.NewGuid().ToString(),
                 Name = request.Name,
                 Password = _jwtService.HashPassword(request.Password),
+                Estates = new List<Estate>(),
                 FavoriteList = new Favorites(),
                 City = request.City,
                 Role = request.Role,
@@ -62,6 +64,42 @@ public class UserController:ControllerBase
         }
        
 
+
+    }
+    
+    [HttpPost("login")]
+
+    public IActionResult Login([FromBody] LoginRequestDto loginDto)
+    {
+
+        try
+        {
+            var user = _context.Users.Include(u => u.FavoriteList).FirstOrDefault((user) => user.Name == loginDto.Name);
+            if (user == null)
+            {
+                return BadRequest("The user not found");
+            }
+
+            if (!_jwtService.VerifyPassword(loginDto.Password, user.Password))
+            {
+                return BadRequest("Incorrect password");
+            }
+
+            var token = _jwtService.GenerateToken(user);
+
+            var ResponseObject = new ResponseObject()
+            {
+                meesage = "Ther user was loged",
+                gotUser = user,
+                token = token,
+            };
+            return Ok(ResponseObject);
+        }
+
+        catch (Exception e)
+        {
+            return BadRequest("Something went wrong, there are error: " + e);
+        }
 
     }
 }
