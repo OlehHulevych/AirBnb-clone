@@ -1,4 +1,4 @@
-// @ts-ignore
+
 import {Row, Container, Col, Navbar, Nav} from "react-bootstrap"
 import {useState} from "react";
 
@@ -21,14 +21,17 @@ export default function Header(){
               </Col>
           </Navbar.Brand>
           <BurgerIcon open={opened} setOpened={setOpened} />
-          <Navbar className={"w-1/2 max-[600px]:hidden"} id="basic-navbar-nav" >
+          <Navbar className={"w-1/2 max-[730px]:hidden"} id="basic-navbar-nav" >
               <Nav className={"flex justify-around"}>
                       <Nav.Link>Home</Nav.Link>
                       <Nav.Link>Area</Nav.Link>
                       <Nav.Link>Latest Properties</Nav.Link>
-                      <Nav.Link>Contact Us</Nav.Link>
+                      <Nav.Link>Contact Us</Nav.Link>  
               </Nav>
           </Navbar>
+            <div className="w-1/12 max-[730px]:mr-10 max-[730px]:w-1/8 ">
+                <img className= "w-1/2 rounded-full cursor-pointer max-[600px]:w-full  " src="./icons/user_placeholder.png" alt="" />
+            </div>
           <Sidebar opened={opened}/>
       </Navbar>
     
