@@ -1,14 +1,15 @@
 
 import {Row, Container, Col, Navbar, Nav} from "react-bootstrap"
-import {useState} from "react";
+import {useState, useContext} from "react";
 
 import { FaHouseChimney } from "react-icons/fa6";
 import BurgerIcon from "../BurgerMenu/BurgerIcon.tsx";
 import Sidebar from "../BurgerMenu/Sidebar.tsx";
+import { MainContext } from "../../context/MainContext.tsx";
 
 
 export default function Header(){
-    
+    const {setOpen} = useContext(MainContext);
     const[opened, setOpened] = useState<boolean>(false);
   return(
 
@@ -29,8 +30,8 @@ export default function Header(){
                       <Nav.Link>Contact Us</Nav.Link>  
               </Nav>
           </Navbar>
-            <div className="w-1/12 max-[730px]:mr-10 max-[730px]:w-1/8 ">
-                <img className= "w-1/2 rounded-full cursor-pointer max-[600px]:w-full  " src="./icons/user_placeholder.png" alt="" />
+            <div  className="w-1/12 max-[730px]:mr-10 max-[730px]:w-1/8 ">
+                <img onClick={()=>setOpen(true)} className= "w-1/2 rounded-full cursor-pointer max-[600px]:w-full  " src="./icons/user_placeholder.png" alt="" />
             </div>
           <Sidebar opened={opened}/>
       </Navbar>

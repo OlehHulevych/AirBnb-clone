@@ -5,8 +5,8 @@ type ContextType = {
     setLocation:React.Dispatch<React.SetStateAction<string>>
     propertyType:string,
     setPropertyType:React.Dispatch<React.SetStateAction<string>>
-    range:Number,
-    setRange:React.Dispatch<React.SetStateAction<any>>
+    range:number,
+    setRange:React.Dispatch<React.SetStateAction<number>>
     
 }
 

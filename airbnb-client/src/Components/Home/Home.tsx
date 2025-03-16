@@ -1,6 +1,9 @@
-﻿import {UserMenu} from '../UserMenu/UserMenu'
+﻿import { MainContext } from '../../context/MainContext';
+import {UserMenu} from '../UserMenu/UserMenu'
+import { useContext } from 'react';
 
 const Home = () => {
+    const {open} = useContext(MainContext);
     return (
         <>
         <main style={{ backgroundImage: `url('./assets/Home-bg.png')` }}  className={"bg-[url('/assets/Home-pg.png')] bg-cover bg-center  w-full min-h-screen flex justify-center  items-center pb-5  "}>
@@ -9,7 +12,8 @@ const Home = () => {
                 <p className={"text-2xl max-[768px]:text-xl"}>Discover Your Ideal Rental Property – Browse a Wide Range of Options, Compare Prices, and Secure Your Next Home with Ease. Find the Perfect Place for Your Lifestyle Today!</p>
             </div>
         </main>
-        <UserMenu/>
+        {open && <UserMenu/>}
+       
         </>
     );
 };

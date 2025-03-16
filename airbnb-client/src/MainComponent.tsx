@@ -10,6 +10,7 @@ import {FilterProvider} from "./context/FilterContext.tsx";
 import LatestPropertyComponent from "./Components/LatestProprties/LatestPropertyComponent.tsx";
 import ContactUsComponent from "./Components/ContactUs/ContactUsComponent.tsx";
 import Footer from "./Components/Footer/Footer.tsx";
+import { MainProvider } from './context/MainContext.tsx';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
 
     return (
         <FilterProvider>
+            <MainProvider>
             <Layout>
                 <Home/>
                 <ProperticeByArea/>
@@ -25,6 +27,7 @@ function App() {
                 <ContactUsComponent/>
                 <Footer/>
             </Layout>
+            </MainProvider>
         </FilterProvider>
     )
 }
